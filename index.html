@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShootIt - 3D Basketball Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        // Load the compiled WebAssembly and initialize the game.
+        var Module = {
+            canvas: document.getElementById('gameCanvas')
+        };
+
+        // Insert the generated .js file here (e.g., `shootit.js`).
+        var script = document.createElement('script');
+        script.src = 'shootit.js'; // Replace with the actual file name.
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>
